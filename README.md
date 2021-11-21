@@ -1,4 +1,4 @@
-# Install torch on Wins10
+# Install torch 1.8 on Wins10
 1. Check or update Nvidia GPU driver version. Here is the corresponding CUDA toolkit list [Link](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html). Download CUDA Toolkit 10.2 version [Link](https://developer.nvidia.com/cuda-10.2-download-archive) 
 
 In cmd
