@@ -1,5 +1,7 @@
 # Install Environment on Anaconda
-## Issue: CommandNotFoundError: Your shell has not been properly configured to use 'conda activate' 
+- Issue: CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'
+
+
 [Solution](https://stackoverflow.com/questions/61915607/commandnotfounderror-your-shell-has-not-been-properly-configured-to-use-conda): 
 In terminal
 ```
@@ -11,6 +13,7 @@ deactivate
 conda env list
 conda info --envs
 source ~/opt/anaconda3/etc/profile.d/conda.sh   ## option
+## if happens: CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'
 conda activate Detectron
 ```
 Show
@@ -58,9 +61,10 @@ print(python_version())
 ```
 
 # Install torch 1.8 on Wins10
-1. Check or update Nvidia GPU driver version. Here is the corresponding CUDA toolkit list [Reference](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html). Download CUDA Toolkit 10.2 version [Reference](https://developer.nvidia.com/cuda-10.2-download-archive) 
+- Check or update Nvidia GPU driver version. Here is the corresponding CUDA toolkit list [Reference](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html). 
+- Download CUDA Toolkit 10.2 version [Reference](https://developer.nvidia.com/cuda-10.2-download-archive) 
 
-In cmd
+CMD line
 ```
 nvidia-smi
 
@@ -82,9 +86,7 @@ Built on Wed_Oct_23_19:32:27_Pacific_Daylight_Time_2019
 Cuda compilation tools, release 10.2, V10.2.89
 
 ```
-
-
-Based on the instruction to choose torch package version ([Link1](https://pytorch.org/get-started/previous-versions/))
+- Based on the instruction to choose torch package version ([Link1](https://pytorch.org/get-started/previous-versions/))
 
 ```
 ## Wins
@@ -121,7 +123,10 @@ conda install -c conda-forge google-colab
 - Wins10 [Reference](https://github.com/facebookresearch/detectron2/issues/9)
   - Solution: [Reference](https://medium.com/@yogeshkumarpilli/how-to-install-detectron2-on-windows-10-or-11-2021-aug-with-the-latest-build-v0-5-c7333909676f)
 
+## VS on wins
+- Microsoft Visual C++ Redistributable Latest Supported: [Download](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170)
 ```
+
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
 ```
 Show
