@@ -17,6 +17,12 @@ Detectron             *  /Users/obaiga/opt/anaconda3/envs/Detectron
 
 ```
 
+# Check python version in Jupyter notebook
+```
+from platform import python_version
+print(python_version())
+```
+
 # Install torch 1.8 on Wins10
 1. Check or update Nvidia GPU driver version. Here is the corresponding CUDA toolkit list [Link](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html). Download CUDA Toolkit 10.2 version [Link](https://developer.nvidia.com/cuda-10.2-download-archive) 
 
