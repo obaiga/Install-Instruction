@@ -5,7 +5,7 @@ In terminal
 ```
 conda env list
 conda info --envs
-source ~/anaconda3/etc/profile.d/conda.sh   ## option
+source ~/opt/anaconda3/etc/profile.d/conda.sh   ## option
 conda activate Detectron
 ```
 Show
