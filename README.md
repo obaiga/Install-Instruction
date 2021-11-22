@@ -3,6 +3,11 @@
 [Solution](https://stackoverflow.com/questions/61915607/commandnotfounderror-your-shell-has-not-been-properly-configured-to-use-conda): 
 In terminal
 ```
+conda create -n NAME
+conda remove --name NAME --all
+activate NAME
+deactivate
+
 conda env list
 conda info --envs
 source ~/opt/anaconda3/etc/profile.d/conda.sh   ## option
@@ -16,6 +21,35 @@ base                     /Users/obaiga/opt/anaconda3
 Detectron             *  /Users/obaiga/opt/anaconda3/envs/Detectron
 
 ```
+# Install a list of Python package from a yam file 
+Example
+```
+name: detectron2
+channels:
+  - pytorch
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - python=3.8
+  - numpy
+  - pywin32
+  - cudatoolkit=11.0
+  - pytorch==1.7.1
+  - torchvision
+  - git
+  - pip
+  - pip:
+    - git+https://github.com/facebookresearch/detectron2.git@v0.3
+```
+[Reference](https://stackoverflow.com/questions/54492671/how-to-install-list-of-python-libraries-using-yml-file-without-making-new-enviro)
+```
+## You can use the conda env update command:
+conda env update --name <your env name> -f <your file>.yml
+
+## or, if the environment you want to update is already activated, then
+conda env update -f <your file>.yml
+```
 
 # Check python version in Jupyter notebook
 ```
@@ -24,7 +58,7 @@ print(python_version())
 ```
 
 # Install torch 1.8 on Wins10
-1. Check or update Nvidia GPU driver version. Here is the corresponding CUDA toolkit list [Link](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html). Download CUDA Toolkit 10.2 version [Link](https://developer.nvidia.com/cuda-10.2-download-archive) 
+1. Check or update Nvidia GPU driver version. Here is the corresponding CUDA toolkit list [Reference](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html). Download CUDA Toolkit 10.2 version [Reference](https://developer.nvidia.com/cuda-10.2-download-archive) 
 
 In cmd
 ```
@@ -84,7 +118,15 @@ conda install -c conda-forge google-colab
 # Install Detectron2
 [Detectron2](https://github.com/facebookresearch/detectron2)
 ## Requirement
-- **Linux or macOS with Python ≥ 3.6, NO WINS**
-- **PyTorch ≥ 1.8** and torchvision that matches the PyTorch installation. 
-- OpenCV is optional but needed by demo and visualization
-<!-- - On MacOS,  -->
+- Wins10 [Reference](https://github.com/facebookresearch/detectron2/issues/9)
+  - Solution: [Reference](https://medium.com/@yogeshkumarpilli/how-to-install-detectron2-on-windows-10-or-11-2021-aug-with-the-latest-build-v0-5-c7333909676f)
+
+```
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
+```
+Show
+```
+** Visual Studio 2019 Developer Command Prompt v16.3.1
+** Copyright (c) 2019 Microsoft Corporation
+```
+
