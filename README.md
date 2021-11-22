@@ -51,6 +51,7 @@ tensor([0.7653], device='cuda:0')
 # Install Detectron2
 [Detectron2](https://github.com/facebookresearch/detectron2)
 ## Requirement
--**Linux or macOS with Python ≥ 3.6, NO WINS**
--**PyTorch ≥ 1.8** and torchvision that matches the PyTorch installation. 
--OpenCV is optional but needed by demo and visualization
+- **Linux or macOS with Python ≥ 3.6, NO WINS**
+- **PyTorch ≥ 1.8** and torchvision that matches the PyTorch installation. 
+- OpenCV is optional but needed by demo and visualization
+<!-- - On MacOS,  -->
