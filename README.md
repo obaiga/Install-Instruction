@@ -76,6 +76,10 @@ GeForce GTX 1080
 True
 tensor([0.7653], device='cuda:0')
 ```
+# Install Colaboratory
+```
+conda install -c conda-forge google-colab
+```
 
 # Install Detectron2
 [Detectron2](https://github.com/facebookresearch/detectron2)
