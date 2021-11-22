@@ -52,10 +52,14 @@ Cuda compilation tools, release 10.2, V10.2.89
 
 Based on the instruction to choose torch package version ([Link1](https://pytorch.org/get-started/previous-versions/))
 
-```python
- pip install torch==1.8.1+cu102 torchvision==0.9.1+cu102 -f https://download.pytorch.org/whl/cu102/torch_stable.html
- 
- 
+```
+## Wins
+pip install torch==1.8.1+cu102 torchvision==0.9.1+cu102 -f https://download.pytorch.org/whl/cu102/torch_stable.html
+
+## MacOSX
+conda install pytorch torchvision torchaudio -c pytorch
+```
+```python 
 import torch, torchvision
 print(torch.__version__)
 print(torch.cuda.get_device_name())
