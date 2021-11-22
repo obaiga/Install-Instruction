@@ -1,3 +1,22 @@
+# Install Environment on Anaconda
+## Issue: CommandNotFoundError: Your shell has not been properly configured to use 'conda activate' 
+[Solution](https://stackoverflow.com/questions/61915607/commandnotfounderror-your-shell-has-not-been-properly-configured-to-use-conda): 
+In terminal
+```
+conda env list
+conda info --envs
+source ~/anaconda3/etc/profile.d/conda.sh   ## option
+conda activate Detectron
+```
+Show
+```
+# conda environments:
+#
+base                     /Users/obaiga/opt/anaconda3
+Detectron             *  /Users/obaiga/opt/anaconda3/envs/Detectron
+
+```
+
 # Install torch 1.8 on Wins10
 1. Check or update Nvidia GPU driver version. Here is the corresponding CUDA toolkit list [Link](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html). Download CUDA Toolkit 10.2 version [Link](https://developer.nvidia.com/cuda-10.2-download-archive) 
 
