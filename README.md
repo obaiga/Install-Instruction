@@ -8,7 +8,7 @@ In terminal
 conda create -n NAME
 conda remove --name NAME --all
 activate NAME
-deactivate
+conda deactivate
 
 conda env list
 conda info --envs
@@ -126,4 +126,91 @@ conda install -c conda-forge google-colab
 - Microsoft Visual C++ Redistributable Latest Supported: [Download](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170)
   - Install Microsoft Visual C++ 2015-2019 Redistributable (x64)&(x86)
   -  Microsoft Visual Studio 2019
+
+
+# Install Mask R-CNN 
+[Reference](https://github.com/matterport/Mask_RCNN)
+
+```
+conda create -n maskrcnn python=3.7.6
+conda activate maskrcnn
+
+pip install numpy
+pip install scipy
+pip install Pillow
+pip install cython
+pip install matplotlib
+pip install scikit-image
+pip install opencv-python
+pip install imgaug
+pip install IPython
+```
+```
+conda install tensorflow==1.14.0
+conda install keras
+conda install tensorflow-gpu  ## for wins
+conda install h5py==2.10.0
+pip install keras_applications==1.0.7
+```
+
+Load python
+```python
+import tensorflow as tf
+import keras
+import h5py
+
+print(tf.__version__)
+print(keras.__version__)
+print(h5py.__version__)
+
+## Check whether GPU is being or not
+from tensorflow.python.client import device_lib
+print(device_lib.list_local_devices())
+
+```
+Show
+```
+1.14.1
+2.3.1
+
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 6757537999743423464
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 7109751604
+locality {
+  bus_id: 1
+  links {
+  }
+}
+incarnation: 6561882754128707177
+physical_device_desc: "device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1"
+]
+```
+
+## Issue
+Description:Failed to get convolution algorithm. This is probably because cuDNN failed to initialize, so try looking to see if a warning log message was printed above. #24828
+
+Alternative description: Delete the underlying status object from memory otherwise it stays alives there is a reference to status from this from the traceback due to UnknownError: Failed to get convolution algorithm. This is probably because cuDNN failed to initialize, so try looking to see if a warning log message was printed above. [[{{node sequential_1_1/Conv1/convolution}}]] [[{{node loss/add_7}}]]
+
+- **Solution (Best)**: restart the computer
+- II
+```python
+import tensorflow as tf
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+sess = tf.Session(config=config)
+```
+- III
+```
+pip uninstall tensorflow-gpu
+conda install tensorflow-gpu
+```
+
+
+
 
