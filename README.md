@@ -121,17 +121,9 @@ conda install -c conda-forge google-colab
 [Detectron2](https://github.com/facebookresearch/detectron2)
 ## Requirement
 - Wins10 [Reference](https://github.com/facebookresearch/detectron2/issues/9)
-  - Solution: [Reference](https://medium.com/@yogeshkumarpilli/how-to-install-detectron2-on-windows-10-or-11-2021-aug-with-the-latest-build-v0-5-c7333909676f)
-
+  - Install solution (the best one!!!!): [Reference](https://dgmaxime.medium.com/how-to-easily-install-detectron2-on-windows-10-39186139101c)
 ## VS on wins
 - Microsoft Visual C++ Redistributable Latest Supported: [Download](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170)
-```
-
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
-```
-Show
-```
-** Visual Studio 2019 Developer Command Prompt v16.3.1
-** Copyright (c) 2019 Microsoft Corporation
-```
+  - Install Microsoft Visual C++ 2015-2019 Redistributable (x64)&(x86)
+  -  Microsoft Visual Studio 2019
 
