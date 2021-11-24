@@ -211,6 +211,13 @@ pip uninstall tensorflow-gpu
 conda install tensorflow-gpu
 ```
 
+# Install Hotspotter 
+## Requirment
+[Reference](https://github.com/SU-ECE-18-7/hotspotter)
+- MacOXS
+```
+pip install pyhesaff ## only support Linux & MacOXS
+```
 
 
 
