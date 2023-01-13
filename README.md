@@ -54,6 +54,11 @@ conda env update --name <your env name> -f <your file>.yml
 conda env update -f <your file>.yml
 ```
 
+# Install Spyder
+```
+conda install -c anaconda spyder
+```
+
 # Check python version in Jupyter notebook
 ```
 from platform import python_version
