@@ -58,8 +58,16 @@ conda env update -f <your file>.yml
 ```
 conda install -c anaconda spyder
 ```
+
 ## [Unable to launch Spyder after installation of PyQt5](https://stackoverflow.com/questions/63409417/unable-to-launch-spyder-after-installation-of-pyqt5)
 Solution：Uninstall pyqt5(pip uninstall pyqt5) and then reinstall it version 5.11.3(pip install pyqt5==5.11.3) After installing the new version it'll show an error msg but it will work anyways. This has worked for me and my colleges.
+
+# Issue ''numpy.ndarray' object has no attribute 'append''
+
+Solution
+```
+conda install numpy=1.20
+```
 
 # Check python version in Jupyter notebook
 ```
